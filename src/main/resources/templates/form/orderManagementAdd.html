@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>报单</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all"/>
+    <link rel="stylesheet" href="/css/public.css" media="all"/>
+</head>
+<body class="childrenBody">
+<form class="layui-form" style="width:80%;">
+    <input type="hidden" name="id" >
+    <div class="layui-form-item layui-row layui-col-xs12">
+        <label class="layui-form-label">抢购订单发布人</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input publisherCode" lay-verify="required" id="publisherCode"
+                   name="publisherCode"
+                   placeholder="请输入抢购订单发布人">
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12">
+        <label class="layui-form-label">下单网站</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input store" lay-verify="required" id="store"
+                   name="store"
+                   placeholder="请输入下单网站">
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12">
+        <label class="layui-form-label">物流运单号</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input trackingNumber" lay-verify="required" id="trackingNumber"
+                   name="trackingNumber"
+                   placeholder="请输入物流运单号">
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12">
+        <label class="layui-form-label">机型+配置+颜色</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input model" lay-verify="required" id="model"
+                   name="model"
+                   placeholder="请输入机型+配置+颜色">
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12">
+        <label class="layui-form-label">下单数量</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input amount" lay-verify="required" id="amount"
+                   name="amount"
+                   placeholder="请输入下单数量">
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12">
+        <label class="layui-form-label">下单价格</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input orderPrice" lay-verify="required" id="orderPrice"
+                   name="orderPrice"
+                   placeholder="请输入下单价格">
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12">
+        <label class="layui-form-label">付款方式</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input paymentMethod" lay-verify="required" id="paymentMethod"
+                   name="paymentMethod"
+                   placeholder="请输入付款方式">
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12">
+        <label class="layui-form-label">到货时间</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input arrivalDate" lay-verify="required" id="arrivalDate"
+                   name="arrivalDate"
+                   placeholder="请输入到货时间">
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12">
+        <label class="layui-form-label">收件人</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input addressee" lay-verify="required" id="addressee"
+                   name="addressee"
+                   placeholder="请输入收件人姓名">
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12">
+        <label class="layui-form-label">收款人</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input payee" lay-verify="required" id="payee"
+                   name="payee"
+                   placeholder="请输入收款人支付宝姓名">
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12">
+        <label class="layui-form-label">回款支付宝</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input alipayAccount" lay-verify="required" id="alipayAccount"
+                   name="alipayAccount"
+                   placeholder="请输入回款支付宝">
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12">
+        <label class="layui-form-label">QQ</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input qq" lay-verify="required" id="qq"
+                   name="qq"
+                   placeholder="请输入备用联系QQ">
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12">
+        <label class="layui-form-label">备注</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input remarks" lay-verify="required" id="remarks"
+                   name="remarks"
+                   placeholder="请输入备注">
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12">
+        <div class="layui-input-block">
+            <button class="layui-btn layui-btn-sm" lay-submit lay-filter="addOrderManagement">立即添加</button>
+            <button type="reset" class="layui-btn layui-btn-sm layui-btn-primary">取消</button>
+        </div>
+    </div>
+</form>
+<script type="text/javascript" src="/layui/layui.js"></script>
+<script type="text/javascript">
+    layui.use(['form', 'layer'], function () {
+        var form = layui.form
+        layer = parent.layer === undefined ? layui.layer : top.layer,
+            $ = layui.jquery;
+
+        form.on("submit(addOrderManagement)", function (data) {
+            //弹出loading
+            var index = top.layer.msg('数据提交中，请稍候', {icon: 16, time: false, shade: 0.8});
+            // 实际使用时的提交信息
+            $.ajax({
+                url: 'orderManagementAddOrUpdate',
+                method: 'post',
+                data: data.field,
+                success: function (res) {
+                    if (res == 'success') {
+                        top.layer.close(index);
+                        top.layer.msg(res);
+                        layer.closeAll("iframe");
+                        parent.location.reload();
+                    } else {
+                        top.layer.close(index);
+                        top.layer.msg("报单失败！");
+                    }
+                },
+                error: function (data) {
+                    top.layer.close(index);
+                    top.layer.msg("报单失败！");
+                    alert("服务器繁忙");
+                    layer.closeAll("iframe");
+                    parent.location.reload();
+                }
+            })
+            return false;//如果不加这句，则ajax的回调函数不执行
+        })
+
+    })
+</script>
+</body>
+</html>

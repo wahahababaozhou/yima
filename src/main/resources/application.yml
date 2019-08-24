@@ -1,0 +1,51 @@
+server:
+  port: 7777
+
+spring:
+  jiemaprofiles:
+    include:
+    - system
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/jiema?characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  #redis:
+    # Redis数据库索引（默认为0）
+    #  database: 10
+    # Redis服务器地址
+   # host: 118.24.166.123
+    # Redis服务器连接端口
+    #port: 6379
+      # Redis服务器连接密码（默认为空）
+      # password:
+      #lettuce:
+      # pool:
+      # 连接池最大连接数（使用负值表示没有限制）
+      #max-active: 8
+      # 连接池最大阻塞等待时间（使用负值表示没有限制） spring.redis.timeout=1ms要加上ms
+      #max-wait: -1ms
+      # 连接池中的最大空闲连接
+      #max-idle: 8
+    # 连接池中的最小空闲连接
+    #min-idle: 0
+    # 连接超时时间（毫秒）
+    #timeout: 0ms
+
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  # mvc:
+  #  static-path-pattern: /resources/**
+  thymeleaf:
+    cache: false
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    default-statement-timeout: 30
+    default-fetch-size: 100

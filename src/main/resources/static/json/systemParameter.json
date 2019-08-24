@@ -1,0 +1,14 @@
+{
+	"cmsName": "layui后台管理模版",
+	"version": "v2.0",
+	"author": "于琦",
+	"homePage": "index.html",
+	"server": "windows",
+	"dataBase": "8.00.2039",
+	"maxUpload": "2M",
+	"userRights": "超级管理员",
+	"description": "借用马哥的前端模板",
+	"powerby": "copyright @2019 哇哈哈八宝粥",
+	"record": "京ICP备14040xxx号-1",
+	"keywords": "layui,哇哈哈八宝粥,layui模版,请叫我哇哈哈八宝粥"
+}
