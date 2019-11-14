@@ -46,14 +46,14 @@ public class CenterController {
     @PostMapping("/login")
     public String login(@RequestParam("username") String username,
                         @RequestParam("password") String password,
-                        Map<String, Object> map, HttpServletRequest request) {
+                        Map<String, Object> map, HttpSession session) {
         try {
             User user = userManager.getUserByMobile(username);
             if (user == null) {
                 map.put("message", username + "用户不存在");
                 return "common/login/login";
             } else if (password.equals(user.getPassword())) {
-                request.getSession().setAttribute("user", user.getMobile());
+                session.setAttribute("user", user.getMobile());
                 map.put("message", "success");
                 return "home";
             } else {
@@ -70,10 +70,9 @@ public class CenterController {
      * 注销登录
      */
     @RequestMapping(value = "/logout")
-    public String logout(HttpServletRequest request) {
-        HttpSession session = request.getSession();
+    public String logout(HttpSession session) {
         session.removeAttribute("user");
-        return "";
+        return "common/login/login";
     }
 
     @GetMapping("/home")
