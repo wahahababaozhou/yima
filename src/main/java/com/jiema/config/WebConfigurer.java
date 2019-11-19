@@ -27,7 +27,7 @@ public class WebConfigurer implements WebMvcConfigurer {
         //开发环境默认不拦截
         /*registry.addInterceptor(loginInterceptor).addPathPatterns("/**").excludePathPatterns("/login/**",
                 "/register/**", "/user/register/**", "/css/**", "/layui/**", "/js/**", "/images/**", "/json/**", "/page/**");*/
-        registry.addInterceptor(loginInterceptor).addPathPatterns("/**").excludePathPatterns("/login/**",
-                "/register/**", "/user/register/**");
+      /*  registry.addInterceptor(loginInterceptor).addPathPatterns("/**").excludePathPatterns("/login/**",
+                "/register/**", "/user/register/**","/login");*/
     }
 }

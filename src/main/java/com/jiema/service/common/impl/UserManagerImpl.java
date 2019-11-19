@@ -1,8 +1,8 @@
-package com.jiema.manager.common.impl;
+package com.jiema.service.common.impl;
 
 import com.jiema.entity.common.User;
-import com.jiema.repository.common.UserRepository;
-import com.jiema.manager.common.UserManager;
+import com.jiema.dao.jpa.common.UserRepository;
+import com.jiema.service.common.UserManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

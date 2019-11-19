@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
  * @author:WangZiBin
  * @description:http发送工具类
  */
-public class HttpUtile {
+public class HttpUtils {
 
 
     /**

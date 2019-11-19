@@ -1,9 +1,9 @@
-package com.jiema.manager.common.impl;
+package com.jiema.service.common.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.jiema.entity.common.Menu;
-import com.jiema.manager.common.MenuManager;
-import com.jiema.repository.common.MenuRepository;
+import com.jiema.service.common.MenuManager;
+import com.jiema.dao.jpa.common.MenuRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

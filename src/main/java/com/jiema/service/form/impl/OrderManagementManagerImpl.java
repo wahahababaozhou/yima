@@ -1,8 +1,8 @@
-package com.jiema.manager.form.impl;
+package com.jiema.service.form.impl;
 
+import com.jiema.dao.jpa.form.OrderManagementRepository;
 import com.jiema.entity.form.OrderManagement;
-import com.jiema.manager.form.OrderManagementManager;
-import com.jiema.repository.form.OrderManagementRepository;
+import com.jiema.service.form.OrderManagementManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

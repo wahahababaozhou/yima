@@ -1,16 +1,13 @@
 package com.jiema.controller.common;
 
 import com.jiema.entity.common.User;
-import com.jiema.manager.common.UserManager;
+import com.jiema.service.common.UserManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.HashMap;
 import java.util.Map;
 
 @Controller
@@ -39,20 +36,42 @@ public class CenterController {
         return "common/register/register";
     }
 
+    private static class Login {
+        private String username;
+        private String password;
+
+        public String getUsername() {
+            return username;
+        }
+
+        public void setUsername(String username) {
+            this.username = username;
+        }
+
+        public String getPassword() {
+            return password;
+        }
+
+        public void setPassword(String password) {
+            this.password = password;
+        }
+    }
 
     /**
      * 登录
      */
     @PostMapping("/login")
-    public String login(@RequestParam("username") String username,
-                        @RequestParam("password") String password,
-                        Map<String, Object> map, HttpSession session) {
+    public String login(/*@RequestParam("username") String username,
+                        @RequestParam("password") String password,*/
+            @RequestBody Login login,
+            HttpSession session) {
+        Map<String, String> map = new HashMap<>();
         try {
-            User user = userManager.getUserByMobile(username);
+            User user = userManager.getUserByMobile(login.getUsername());
             if (user == null) {
-                map.put("message", username + "用户不存在");
+                map.put("message", login.getUsername() + "用户不存在");
                 return "common/login/login";
-            } else if (password.equals(user.getPassword())) {
+            } else if (login.getPassword().equals(user.getPassword())) {
                 session.setAttribute("user", user.getMobile());
                 map.put("message", "success");
                 return "home";

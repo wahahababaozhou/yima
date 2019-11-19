@@ -1,4 +1,4 @@
-package com.jiema.manager.common;
+package com.jiema.service.common;
 
 import com.jiema.entity.common.User;
 

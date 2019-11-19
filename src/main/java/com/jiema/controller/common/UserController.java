@@ -4,7 +4,7 @@ package com.jiema.controller.common;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.jiema.entity.common.User;
-import com.jiema.manager.common.UserManager;
+import com.jiema.service.common.UserManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

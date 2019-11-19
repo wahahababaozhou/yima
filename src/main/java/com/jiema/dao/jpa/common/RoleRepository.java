@@ -1,4 +1,4 @@
-package com.jiema.repository.common;
+package com.jiema.dao.jpa.common;
 
 import com.jiema.entity.common.Role;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -13,7 +13,8 @@ import java.util.List;
  */
 @Mapper
 @Service
-public interface orderManagementMapper {
-    @Select("select * from cib_user where id = #{id}")
+public interface OrderManagementMapper {
+
+    @Select("select * from order_management where id = #{id}")
     List<OrderManagement> finOrderManagementById(@Param("id") Long id);
 }

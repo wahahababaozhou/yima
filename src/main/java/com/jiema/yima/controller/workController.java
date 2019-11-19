@@ -1,6 +1,6 @@
 package com.jiema.yima.controller;
 
-import com.jiema.manager.common.UserManager;
+import com.jiema.service.common.UserManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 

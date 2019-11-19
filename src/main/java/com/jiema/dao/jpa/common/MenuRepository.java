@@ -1,4 +1,4 @@
-package com.jiema.repository.common;
+package com.jiema.dao.jpa.common;
 
 import com.jiema.entity.common.Menu;
 import org.springframework.data.jpa.repository.JpaRepository;
