@@ -1,5 +1,7 @@
 server:
   port: 7777
+  servlet:
+    context-path: /yima
 
 spring:
   jiemaprofiles:
